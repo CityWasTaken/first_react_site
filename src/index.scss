@@ -1,0 +1,176 @@
+// RESETS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    background: #777;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+// GLOBAL CLASSES
+
+.text-center {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #555;
+    color: #fff;
+    padding: 8px 5%;
+    
+
+    div.logo {
+        display: flex;
+        align-items: center;
+        img {
+            border-radius: 8px;
+            width: 50px;
+            margin-right: 15px;
+        }
+    }
+}
+
+h3 {
+    font-weight: 450;
+}
+
+nav {
+    a {
+        color: #fff;
+        text-decoration: none;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Hero Section
+section.hero {
+    display: flex;
+    background-color: #E3DED2;
+
+    div.image {
+        background-image: url('images/CityBlueDurag.jpg');
+        background-size: cover;
+        min-height: 800px;
+        min-width: 50%;
+    }
+}
+
+div.hero-text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    h4 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-weight: 300;
+    }
+}
+
+// WORK SECTION
+
+main {
+    padding: 15px 5%;
+    color: #fff;
+    flex: 1;
+
+    h4 {
+        margin-bottom: 15px;
+        border-bottom: 3px solid #E3DED2;
+    }
+    section.work-output {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        article {
+            padding: 15px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+
+            h5 {
+                margin-bottom: 7px;
+            }
+
+            p {
+                font-size: .8rem;
+                line-height: 1.3;
+            }
+        }
+    }
+}
+
+// CONTACT SECTION
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto 25px;
+
+    > * {
+        padding: 7px 12px;
+        margin-bottom: 5px;
+        border: none;
+    }
+    
+    h5 {
+        color: #fff;
+    }
+
+    input, textarea {
+        outline: none;
+        background-color: #555;
+        border-radius: 4px;
+        color: #E3DED2;
+
+        &::placeholder {
+            color: #E3DED2;
+        }
+        
+    }
+
+    button {
+        background: #e4d4b0;
+        cursor: pointer;
+        &:hover {
+            background: #555;
+            color: #e4d4b0;
+        }
+    }
+}
+
+// FOOTER
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 5%;
+    background: #b8b4ad;
+    color: #555;
+}
