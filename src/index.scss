@@ -57,7 +57,7 @@ nav {
             margin-right: 8px;
         }
 
-        &:hover {
+        &:hover, &.active {
             text-decoration: underline;
         }
     }
@@ -67,6 +67,7 @@ nav {
 section.hero {
     display: flex;
     background-color: #E3DED2;
+    margin-bottom: 20px;
 
     div.image {
         background-image: url('images/CityBlueDurag.jpg');
@@ -94,18 +95,18 @@ div.hero-text {
 // WORK SECTION
 
 main {
-    padding: 15px 5%;
     color: #fff;
     flex: 1;
 
     h4 {
         margin-bottom: 15px;
-        border-bottom: 3px solid #E3DED2;
+        border-bottom: 3px solid #e4d4b0;
     }
     section.work-output {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+        padding: 0 3%;
 
         article {
             padding: 15px;
@@ -177,4 +178,14 @@ footer {
     padding: 35px 5%;
     background: #b8b4ad;
     color: #555;
+}
+
+// MEDIA QUERY
+
+@media (max-width: 750px) {
+    section.hero {
+        flex-direction: column;
+        padding: auto;
+    }
+
 }

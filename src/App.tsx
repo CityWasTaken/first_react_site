@@ -1,10 +1,10 @@
-// import { useState } from 'react';
+import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Work from "./components/Work";
-import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+
+import Landing from "./pages/landing";
+import ContactForm from "./pages/ContactForm";
 
 function App() {
 
@@ -14,11 +14,16 @@ function App() {
         <>
             <Header />
 
-            <Hero />
+            <main>
 
-            <Work />
+                <Routes>
 
-            <ContactForm />
+                    <Route path="/" element={<Landing />} />
+                    <Route path="/contact" element={<ContactForm />} />
+
+                </Routes>
+
+            </main>
 
             <Footer />
         </>
